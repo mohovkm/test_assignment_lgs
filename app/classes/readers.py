@@ -51,6 +51,7 @@ class CSVFileReader(Reader):
             path = Path(path)
             if not path.is_file():
                 print(f'{path} is not a file')
+                continue
 
             with open(path, mode='r') as f:
                 csv_reader = csv.DictReader(f)
@@ -67,7 +68,7 @@ class CSVFileReader(Reader):
 
                         if len(aliases) > 1 and value.get('concat', False):
                             values_to_concat = []
-                            for alias in value.get('concat'):
+                            for alias in value.get('concat', []):
                                 values_to_concat.append(row[alias])
                             val = '.'.join(values_to_concat)
 

@@ -1,18 +1,18 @@
 from typing import List
 from .readers import Reader
 from .writers import Writer
+from functools import reduce
 
 
 class CSVHandler:
     @staticmethod
-    def merge(entities: List[dict]) -> dict:
+    def merge(entities: List[List[dict]]) -> List[dict]:
         """
 
         :param entities:
         :return:
         """
-        # self.entity = {}
-        return {}
+        return list(reduce(lambda x, y: [*x, *y], entities))
 
     @staticmethod
     def read(reader: Reader) -> List[list]:
@@ -25,7 +25,7 @@ class CSVHandler:
         return csv_data
 
     @staticmethod
-    def write(writer: Writer, entity: dict) -> None:
+    def write(writer: Writer, entity: List[dict]) -> None:
         """
 
         :param writer:
