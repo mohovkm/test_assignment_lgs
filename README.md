@@ -36,7 +36,7 @@ If you want to use different csv format to read data, you need to override `CSVF
 ```python
 _mapping = {
     'date': { # column name in output file 
-        'aliases': ['timestamp'] # all column names in all files, that contains this format
+        'aliases': ['timestamp'], # all column names in all input files, that contains this format
         'func': lambda x: datetime.strptime(x, format) # function to transform data while read
     }
 }
@@ -53,4 +53,4 @@ _mapping = {
 }
 ```
 #### Warning!
-CSVFileWriter will write all data in merged entity. It uses `_mapping` only for data transformation before writing it to csv file.`
+CSVFileWriter will write all data in merged entity. It uses `_mapping` only for data transformation before writing it to csv file.

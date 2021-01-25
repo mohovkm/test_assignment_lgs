@@ -2,19 +2,22 @@ from classes import CSVHandler, CSVFileReader, CSVFileWriter
 from pathlib import Path
 import logging
 
-# Configuring logging
-logging_dir = Path('logs')
-logging_filename = Path('app.log')
-logging_dir.mkdir(parents=True, exist_ok=True)
-logging.basicConfig(
-    filename=logging_dir / logging_filename,
-    level=logging.ERROR,
-    format='%(asctime)s: %(levelname)s: %(message)s',
-    datefmt='%m.%d.%Y %H:%I:%S'
-)
+
+def configure_logging():
+    logging_dir = Path('logs')
+    logging_filename = Path('app.log')
+    logging_dir.mkdir(parents=True, exist_ok=True)
+    logging.basicConfig(
+        filename=logging_dir / logging_filename,
+        level=logging.ERROR,
+        format='%(asctime)s: %(levelname)s: %(message)s',
+        datefmt='%m.%d.%Y %H:%I:%S'
+    )
 
 
 def main():
+    configure_logging()
+
     # Collecting all csv files in folder
     csv_files_paths = list(Path('files').glob('*.csv'))
 
