@@ -5,7 +5,10 @@ To run a program you need to use Python >= 3.6 (program checked on a python >= 3
 You don't need to use extra libraries or modules with this program.
 
 run program:
-`#> python3 app/main.py`
+```
+#> cd app
+#> python3 main.py
+```
 
 run tests:
 ```
