@@ -4,8 +4,15 @@ Full text of this test assignment you can find at [this url](https://gist.github
 To run a program you need to use Python >= 3.6 (program checked on a python >= 3.8).
 You don't need to use extra libraries or modules with this program.
 
-run:
+run program:
 `#> python3 app/main.py`
+
+run tests:
+```
+#> cd app
+#> python3 -m unittest tests/test_writer.py
+#> python3 -m unittest tests/test_reader.py
+```
 
 Structure:
 - **app**: root directory
