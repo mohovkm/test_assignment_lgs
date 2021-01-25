@@ -61,6 +61,7 @@ class CSVFileWriter(Writer):
             fieldnames = entity[0].keys()
             writer = csv.DictWriter(f, fieldnames=fieldnames)
 
+            f.write('')
             writer.writeheader()
             for row in entity:
                 for key, value in self._mapping.items():

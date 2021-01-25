@@ -1,8 +1,8 @@
 ## Test assignment.
-Text of test task you can find at [this url](https://gist.github.com/Attumm/3927bfab39b32d401dc0a4ca8db995bd#file-bank1-csv).
+Full text of this test assignment you can find at [this url](https://gist.github.com/Attumm/3927bfab39b32d401dc0a4ca8db995bd#file-bank1-csv).
 
 To run a program you need to use Python >= 3.6 (program checked on a python >= 3.8).
-You don't need to use extra libraries or 
+You don't need to use extra libraries or modules with this program.
 
 run:
 `#> python3 app/main.py`

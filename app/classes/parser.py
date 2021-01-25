@@ -4,11 +4,11 @@ from typing import Union
 
 class Parser:
     @staticmethod
-    def parse_data(date, formats: list) -> Union[datetime, None]:
-        """
+    def parse_data(date: str, formats: list) -> Union[datetime, None]:
+        """Parse string with given formats
 
-        :param date:
-        :param formats:
+        :param date: (str) - string with date
+        :param formats: (list) - all possible formats, that date may look like
         :return:
         """
         parsed_date = None
